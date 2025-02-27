@@ -1,6 +1,6 @@
-import { FloatingNav } from '@/components/ui/floating-navbar'
-import { ModeToggle } from '@/components/ui/mode-toggle'
-import { Home as HomeIcon, CircleHelp } from 'lucide-react'
+import { FloatingNav } from '@/components/ui/floating-navbar';
+import { ModeToggle } from '@/components/ui/mode-toggle';
+import { Home as HomeIcon, CircleHelp } from 'lucide-react';
 
 export default function Home() {
     const navItems = [
@@ -14,7 +14,7 @@ export default function Home() {
             link: '/about',
             icon: <CircleHelp />,
         },
-    ]
+    ];
     return (
         <main className="relative h-screen w-screen overflow-hidden">
             <div className="absolute top-4 right-4 z-10 flex flex-col gap-2">
@@ -22,5 +22,5 @@ export default function Home() {
             </div>
             <FloatingNav navItems={navItems} />
         </main>
-    )
+    );
 }
