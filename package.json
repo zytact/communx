@@ -11,6 +11,7 @@
     },
     "dependencies": {
         "@radix-ui/react-dropdown-menu": "^2.1.6",
+        "@radix-ui/react-popover": "^1.1.6",
         "@radix-ui/react-slot": "^1.1.2",
         "babel-plugin-react-compiler": "19.0.0-beta-e1e972c-20250221",
         "class-variance-authority": "^0.7.1",
