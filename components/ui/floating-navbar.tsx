@@ -2,6 +2,7 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
+import { signIn } from '@/lib/auth-client';
 
 interface NavItem {
     name: string;
@@ -51,6 +52,18 @@ export const FloatingNav = ({
                         </span>
                     </Link>
                 ))}
+                <button
+                    className="relative rounded-full border border-neutral-200 px-4 py-2 text-sm font-medium text-black dark:border-white/[0.2] dark:text-white"
+                    onClick={async () => {
+                        await signIn.social({
+                            provider: 'google',
+                            callbackURL: '/communities',
+                        });
+                    }}
+                >
+                    <span>Login</span>
+                    <span className="absolute inset-x-0 -bottom-px mx-auto h-px w-1/2 bg-gradient-to-r from-transparent via-blue-500 to-transparent" />
+                </button>
             </motion.div>
         </AnimatePresence>
     );

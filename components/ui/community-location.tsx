@@ -41,7 +41,12 @@ export function LocationDetector() {
 
             // Use reverse geocoding to get the city name
             const response = await fetch(
-                `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`
+                `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`,
+                {
+                    headers: {
+                        'User-Agent': 'CommunX-App/0.1.0',
+                    },
+                }
             );
 
             if (!response.ok) {
