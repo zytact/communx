@@ -1,8 +1,9 @@
 'use client';
 import { FloatingNav } from '@/components/ui/floating-navbar';
+import { GlowEffectButton } from '@/components/ui/GlowEffectButton';
 import { TypewriterEffect } from '@/components/ui/TypeWriter';
 import { WavyBackground } from '@/components/ui/wavy-background';
-import { Home as HomeIcon, CircleHelp } from 'lucide-react';
+import { Home as HomeIcon, CircleHelp, Users as Community } from 'lucide-react';
 
 export default function Home() {
     const navItems = [
@@ -10,6 +11,11 @@ export default function Home() {
             name: 'Home',
             link: '/',
             icon: <HomeIcon />,
+        },
+        {
+            name: 'Communities',
+            link: '/communities',
+            icon: <Community />,
         },
         {
             name: 'About',
@@ -24,18 +30,28 @@ export default function Home() {
             <FloatingNav navItems={navItems} />
             <WavyBackground
                 backgroundFill="#171717"
-                colors={['#a61717', '#e53e17', '#ba3e17']}
+                colors={['#2f3ed2', '#5a3ed2', '#093ed2']}
             >
-                <TypewriterEffect
-                    words={[
-                        { text: 'The' },
-                        { text: 'best' },
-                        { text: 'in' },
-                        { text: 'the' },
-                        { text: 'world' },
-                    ]}
-                    cursorClassName="bg-red-500"
-                />
+                <div className="flex flex-col items-center justify-center">
+                    <div className="mb-16">
+                        <TypewriterEffect
+                            words={[
+                                { text: 'Find' },
+                                { text: 'Your' },
+                                { text: 'People.' },
+                                { text: 'Join' },
+                                { text: 'the' },
+                                { text: 'Right' },
+                                { text: 'Community.' },
+                            ]}
+                            cursorClassName="bg-blue-500"
+                        />
+                    </div>
+
+                    <div className="mt-8">
+                        <GlowEffectButton />
+                    </div>
+                </div>
             </WavyBackground>
         </main>
     );
