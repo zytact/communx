@@ -36,13 +36,12 @@ export default function Home() {
                     <div className="mb-16">
                         <TypewriterEffect
                             words={[
-                                { text: 'Find' },
-                                { text: 'Your' },
-                                { text: 'People.' },
-                                { text: 'Join' },
-                                { text: 'the' },
-                                { text: 'Right' },
-                                { text: 'Community.' },
+                                { text: 'We' },
+                                { text: 'Connect.' },
+                                { text: 'We' },
+                                { text: 'Build.' },
+                                { text: 'We' },
+                                { text: 'Welcome.' },
                             ]}
                             cursorClassName="bg-blue-500"
                         />
